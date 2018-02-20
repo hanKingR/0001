@@ -1,0 +1,18 @@
+﻿<cwcshop>
+	<action>
+		<name>jquery_url</name>
+		<value>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.js</value>
+		<name>url</name>
+		<value>http://localhost:8080/Spring_MVC_Mybatis</value>
+		<!-- 
+		<name>photo_url</name>
+		<value>http://192.168.9.100:8080</value>
+		<name>css_url</name>
+		<value>http://192.168.9.100:8080</value>
+		<name>js_url</name>
+		<value>http://192.168.9.100:8080</value>
+		<name>www_url</name>
+		<value>http://192.168.9.100:8080</value>
+		 -->
+	</action>
+</cwcshop>

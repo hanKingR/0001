@@ -71,7 +71,7 @@ public class FilesUploadController {
             fileJson.put("fileId", originName);
             jsonArray.add(fileJson);
 		}
-		
+		//此处乱码是新增了一个jar 解决
         Map<String,Object> map=new HashMap<String, Object>();
         map.put("status", "1");
         map.put("message", "成功");

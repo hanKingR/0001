@@ -9,7 +9,7 @@
 	<!-- 项目属性 -->
 	<properties>
 		<!-- 各个包结构的版本 -->
-		<org.springframework.version>4.3.14.RELEASE</org.springframework.version>
+		<org.springframework.version>4.1.1.RELEASE</org.springframework.version>
 		<aspectj.version>1.7.4</aspectj.version>
 		<jdk.version>1.8</jdk.version>
 	</properties>
@@ -134,7 +134,6 @@
 			<artifactId>druid</artifactId>
 			<version>1.1.7</version>
 		</dependency>
-
 
 		<!-- Spring end -->
 		<dependency>

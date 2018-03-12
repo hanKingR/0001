@@ -9,7 +9,7 @@
 	<!-- 项目属性 -->
 	<properties>
 		<!-- 各个包结构的版本 -->
-		<org.springframework.version>4.1.1.RELEASE</org.springframework.version>
+		<org.springframework.version>4.3.14.RELEASE</org.springframework.version>
 		<aspectj.version>1.7.4</aspectj.version>
 		<jdk.version>1.8</jdk.version>
 	</properties>
@@ -193,7 +193,7 @@
 		<dependency>
 			<groupId>com.fasterxml.jackson.jaxrs</groupId>
 			<artifactId>jackson-jaxrs-json-provider</artifactId>
-			<version>2.3.0-rc1</version>
+			<version>2.9.4</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/junit/junit -->

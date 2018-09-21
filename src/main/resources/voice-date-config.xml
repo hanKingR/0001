@@ -12,6 +12,15 @@
 
     <context:property-placeholder location="classpath:resources.properties"/>
 
+    <!-- 基于注解的Spring MVC -->
+    <mvc:annotation-driven />
+
+    <!--<context:component-scan base-package="**.entity" />-->
+    <!--<context:component-scan base-package="**.dao" />-->
+    <!--<context:component-scan base-package="**.service" />-->
+    <!--<context:component-scan base-package="**.requestvo" />-->
+    <!--<context:component-scan base-package="**.omsrequest" />-->
+
     <!-- 数据源 -->
     <!--see https://github.com/alibaba/druid/wiki/%E9%85%8D%E7%BD%AE_DruidDataSource%E5%8F%82%E8%80%83%E9%85%8D%E7%BD%AE-->
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">

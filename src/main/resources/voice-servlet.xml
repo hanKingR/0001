@@ -15,36 +15,20 @@
         http://www.springframework.org/schema/aop
         http://www.springframework.org/schema/aop/spring-aop.xsd">
 
-	<!-- 解决通过@ResponseBody 直接返回中文时的乱码 -->
-	<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
-		<property name="messageConverters">
-			<list>
-				<bean
-					class="org.springframework.http.converter.StringHttpMessageConverter">
-					<property name="supportedMediaTypes">
-						<list>
-							<value>text/plain;charset=UTF-8</value>
-							<value>text/html;charset=UTF-8</value>
-							<value>applicaiton/javascript;charset=UTF-8</value>
-						</list>
-					</property>
-				</bean>
-			</list>
-		</property>
+
+	<!-- 校验器，配置validator -->
+	<bean id="validator"
+		  class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
 	</bean>
 
-
-	<!-- 注意事项请参考：http://jinnianshilongnian.iteye.com/blog/1762632 -->
-	<context:component-scan base-package="**.controller"
-		use-default-filters="false">
-		<context:include-filter type="annotation"
-			expression="org.springframework.stereotype.Controller" />
-		<context:include-filter type="annotation"
-			expression="org.springframework.web.bind.annotation.ControllerAdvice" />
-	</context:component-scan>
+	<context:property-placeholder location="classpath:resources.properties"/>
 
 	<!-- 基于注解的Spring MVC -->
-	<mvc:annotation-driven />
+	<mvc:annotation-driven validator="validator"/>
+
+	<mvc:default-servlet-handler />
+
+	<context:component-scan base-package="**.controller" />
 
 	<!-- 视图解释类 -->
 	<bean id="internalResourceViewResolver"
@@ -57,8 +41,8 @@
 	</bean>
 
 	<!-- 设置静态资源文件 -->
-	<mvc:resources mapping="/js/**" location="/js/" />
-	<mvc:resources mapping="/css/**" location="/css/" />
+	<!--<mvc:resources mapping="/js/**" location="/js/" />-->
+	<!--<mvc:resources mapping="/css/**" location="/css/" />-->
 
 	<!-- 上传文件的分解器 -->
 	<bean id="multipartResolver"
